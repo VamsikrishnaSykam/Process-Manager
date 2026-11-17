@@ -52,3 +52,73 @@ Process enumeration, process CPU accounting, working-set memory inspection, proc
 - This source package has not been compiled on the user's Windows machine as part of this update. Compile with `build.bat` and report any MSVC diagnostics before relying on it for evaluation.
 
 \n## GUI theme update\n\nThe GUI uses a navy-and-white title area, a pale-blue status strip, alternating process-table rows, and colour-coded classification text (CPU-Bound, I/O-Bound, Idle, Balanced, and Warming Up). CPU and memory history charts retain blue and green lines respectively.\n
+## Build and Run Instructions
+
+### Prerequisites
+
+Before running the application, make sure you have:
+
+- Windows 10 or Windows 11.
+- Visual Studio 2022 Build Tools or Visual Studio with the **Desktop development with C++** workload installed.
+- Microsoft C/C++ compiler (MSVC).
+- Windows SDK.
+
+### Step 1: Clone the Repository
+
+Open Command Prompt or VS Code terminal and execute:
+
+```bash
+git clone https://github.com/VamsikrishnaSykam/Process-Manager.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd Process-Manager
+```
+
+### Step 2: Open Developer Command Prompt
+
+Open **Developer Command Prompt for VS 2022** from the Windows Start menu.
+
+Navigate to the downloaded project folder:
+
+```cmd
+cd path\to\Process-Manager
+```
+
+Make sure the Microsoft C compiler is available:
+
+```cmd
+cl
+```
+
+### Step 3: Build the Application
+
+Execute the build script:
+
+```cmd
+build.bat
+```
+
+The script compiles the C source files and generates the application executable.
+
+### Step 4: Run the Application
+
+After successful compilation, execute:
+
+```cmd
+build\ProcessManager.exe
+```
+
+The Process Manager desktop application should now launch.
+
+### Troubleshooting
+
+- **'cl' is not recognized:** Make sure you are using Developer Command Prompt for VS 2022.
+- **Build errors:** Verify that Visual Studio C++ Build Tools and Windows SDK are installed.
+- **Executable not found:** Check whether the build completed successfully and generated `build\ProcessManager.exe`.
+
+### Note
+
+This is a native Windows desktop application developed using C and Win32 API. It does not require a web server, browser, or database.
