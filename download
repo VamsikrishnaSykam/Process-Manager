@@ -1,6 +1,0 @@
-build/*.exe
-build/*.obj
-build/*.ilk
-build/*.pdb
-*.user
-.vs/
